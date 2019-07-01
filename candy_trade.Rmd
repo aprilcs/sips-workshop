@@ -22,7 +22,7 @@ This notebook contains all data and code to replicate our workshop candy trade a
 Our data was collected using a [google form](https://goo.gl/forms/Mxi2fKrOYc9UCB9j1). For each trade, the participants contributed their name (*"participant_name"*), which trade they had just finished (*"trade_number"*), and their current happiness with their candy selection (*"happiness_rating"*). 
 
 ```{r, echo=FALSE}
-data <- read.csv("/data/data.csv", header=TRUE, sep=",", as.is=TRUE)
+data <- read.csv("../data/data.csv", header=TRUE, sep=",", as.is=TRUE)
 ```
 
 ## Happiness rating vs. number of trades
