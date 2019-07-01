@@ -1,0 +1,45 @@
+---
+title: "Workshop Candy Trade"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r, load_packages}
+library(rmarkdown)
+library(ggplot2)
+library(knitr)
+```
+
+This notebook contains all data and code to replicate our workshop candy trade analyses. Every participant of the workshop received a handful of candy. They then conducted an experiment exploring the impact of candy trading on their candy selection happiness:
+
+1. **Pre-trade**: Participants were asked to rate the happiness of their candy selection on a scale from 1-10 (trade 0). 
+
+2. **Trade 1**: Participants were then allowed to trade with one participant and rate the happiness with their selection following the trade on a scale from 1-10 (trade 1). 
+
+3. **Trade 2**: Participants were then allowed to trade with the whole group and rate their happiness with their final selection on a scale from 1-10 (trade 2).
+
+Our data was collected using a [google form](https://goo.gl/forms/Mxi2fKrOYc9UCB9j1). For each trade, the participants contributed their name (*"participant_name"*), which trade they had just finished (*"trade_number"*), and their current happiness with their candy selection (*"happiness_rating"*). 
+
+```{r, echo=FALSE}
+data <- read.csv("/data/data.csv", header=TRUE, sep=",", as.is=TRUE)
+```
+
+## Happiness rating vs. number of trades
+
+To explore the trends in individual candy selection happiness over the trades, we created a simple line plot.
+```{r, echo=TRUE}
+myPlot = ggplot(data, aes(data$trade_number, 
+    data$happiness_rating,colour=data$participant_name)) + 
+    geom_line() + 
+    geom_point()
+plot(myPlot)
+```
+
+## Changes in candy selection happiness of our workshop group
+
+Finally, we explored whether happiness changed significantly as a group over the trades using a boxplot.
+
+```{r, echo=TRUE}
+boxplot(happiness_rating ~ trade_number, data = data)
+```
