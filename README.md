@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://hub.gke.mybinder.org/user/aprilcs-sips-workshop-frlyrihx/rstudio/)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/aprilcs/sips-workshop/master)
 
 # Title
 The great candy swap of SIPS 2019.
