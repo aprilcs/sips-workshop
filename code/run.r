@@ -1,4 +1,4 @@
-source("install.r")
+# source("install.r")
 
 rmarkdown::render('code/candy_trade.Rmd', 
                   'html_document',
