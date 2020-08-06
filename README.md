@@ -13,7 +13,7 @@ April Clyburne-Sherin, april.clyburne.sherin@gmail.com
 
 ## Code files
 
-### Python scripts
+### R scripts
 
  -- What it is, what it does, how it relates to other files.
 
