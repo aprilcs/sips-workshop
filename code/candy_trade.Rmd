@@ -28,7 +28,7 @@ data <- read.csv("../data/data.csv", header=TRUE, sep=",", as.is=TRUE)
 ## Happiness rating vs. number of trades
 
 To explore the trends in individual candy selection happiness over the trades, we created a simple line plot.
-```{r, echo=TRUE}
+```{r, echo=TRUE, warning=FALSE}
 myPlot = ggplot(data, aes(data$trade_number, 
     data$happiness_rating,colour=data$participant_name)) + 
     geom_line() + 
